@@ -1344,7 +1344,7 @@ GameObject:
   - component: {fileID: 6805919990534140942}
   - component: {fileID: 3107373607311001472}
   - component: {fileID: 2548777079487480104}
-  - component: {fileID: 3834097808541935599}
+  - component: {fileID: 8613857276556762093}
   m_Layer: 0
   m_Name: Zone
   m_TagString: Untagged
@@ -1476,8 +1476,8 @@ MonoBehaviour:
   AssignedImps: 0
   SuspicionLevel: 0
   State: 0
---- !u!65 &3834097808541935599
-BoxCollider:
+--- !u!64 &8613857276556762093
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1486,9 +1486,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8373003158946141684, guid: 723f963ee576288479afd35bde464494, type: 3}
 --- !u!1 &3221244479486607662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2098,7 @@ RectTransform:
   m_GameObject: {fileID: 5088752837226749339}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.694}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6003359708361552313}
