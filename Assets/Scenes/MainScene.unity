@@ -2258,8 +2258,32 @@ MonoBehaviour:
   - {fileID: 584669926}
   - {fileID: 584669925}
   events:
-  - {fileID: 11400000, guid: aa580c9a1dccead4882be2b9a095efe8, type: 2}
-  hoursLimits: {x: 8, y: 24}
+  - {fileID: 11400000, guid: 74a67c2beca2a7c4694eed63188bfbda, type: 2}
+  - {fileID: 11400000, guid: 41f92d496cb833d4080c8347dba02b4e, type: 2}
+  - {fileID: 11400000, guid: fdad8fef85da38145b23d70249ab0803, type: 2}
+  - {fileID: 11400000, guid: bee04a153977f17439ea5a71d49c06dc, type: 2}
+  - {fileID: 11400000, guid: ce0a2d1495552844ebfd09746bf1b534, type: 2}
+  - {fileID: 11400000, guid: 1cbf7cb92701e404dadc92580bf3ce90, type: 2}
+  - {fileID: 11400000, guid: c2d1556b83e802440a5416f69cd0b3d8, type: 2}
+  - {fileID: 11400000, guid: bafa616bf2f2fa9408e5300988bb2075, type: 2}
+  - {fileID: 11400000, guid: 33375c68ff8ad1d4f84cd82ac7e23d5b, type: 2}
+  - {fileID: 11400000, guid: 38648e80f689b3c48acda01dc43c0e19, type: 2}
+  - {fileID: 11400000, guid: ca5bd4b563f659d459415b4a4b71dc10, type: 2}
+  - {fileID: 11400000, guid: 86ce148ce11de9749a837dbef1f5a40c, type: 2}
+  - {fileID: 11400000, guid: bc28d2ba0f86f1b47bd7e43fbc17dd90, type: 2}
+  - {fileID: 11400000, guid: d1c65e9c6a6c33c4ab120f4483b4cc84, type: 2}
+  - {fileID: 11400000, guid: eeb8d60001f3af646a1602d512922e23, type: 2}
+  - {fileID: 11400000, guid: 9d4cc171aa47f654f90c9854241e6120, type: 2}
+  - {fileID: 11400000, guid: 1e89a8a39b41f25489c0654208b11219, type: 2}
+  - {fileID: 11400000, guid: 8dda19d880c48b445a52af7eb8655ca0, type: 2}
+  - {fileID: 11400000, guid: 2c85297352e6d12408c757f77ad2397d, type: 2}
+  - {fileID: 11400000, guid: 8b2dd89254bc21c44abf37541e6a000c, type: 2}
+  - {fileID: 11400000, guid: 3877dc239529d964caaea2607dc5701f, type: 2}
+  - {fileID: 11400000, guid: 9eb84a421abae334cae81f81e065ada2, type: 2}
+  - {fileID: 11400000, guid: afaeba5cbffc4434280bb12ed58d01dc, type: 2}
+  - {fileID: 11400000, guid: b6dbfd9db450e134c8005a76ea09b015, type: 2}
+  - {fileID: 11400000, guid: 165ba49aee362a54e963ef861e25cf9b, type: 2}
+  hoursLimits: {x: 12, y: 24}
   dayField: {fileID: 1846721772}
   timeField: {fileID: 264618884}
   dayProgressSlider: {fileID: 1944343244}
@@ -3930,6 +3954,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6659197436518178330, guid: 52703cb805385c9429dac6215c1a225a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c30ca6cce83facd4d8136f86844bb3d1, type: 3}
+    - target: {fileID: 6680430413168670769, guid: 52703cb805385c9429dac6215c1a225a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62f59233f6079474695dab6cba858c1e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52703cb805385c9429dac6215c1a225a, type: 3}
 --- !u!1 &1846721769
@@ -4489,6 +4521,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
   - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
   - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+  - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
   demonCards: []
   demonCardPrefab: {fileID: 405896347}
   impsCountText: {fileID: 1076305788}

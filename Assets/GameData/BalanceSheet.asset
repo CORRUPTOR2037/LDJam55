@@ -13,19 +13,21 @@ MonoBehaviour:
   m_Name: BalanceSheet
   m_EditorClassIdentifier: 
   dayLength: 100
-  timeToTakeEvent: 30
+  timeToTakeEvent: 20
   eventSpawnTime: {x: 5, y: 10}
   timeForImpFighting: 2
   daysSettings:
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
     availableExorcists:
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
-    - Zone1
-    - Zone2
-    - Zone4
+    - Central
+    - Shopping
+    - South
+    - Industrial
     rageTarget: 100
     availableImps: 5
     patrolling: 0
@@ -37,12 +39,32 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
-    - Zone1
-    - Zone2
-    - Zone4
-    - Zone5
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic town
     rageTarget: 150
     availableImps: 7
+    patrolling: 0
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    availableExorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic town
+    rageTarget: 300
+    availableImps: 10
     patrolling: 0
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
@@ -56,11 +78,36 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
-    - Zone1
-    - Zone2
-    - Zone3
-    - Zone4
-    - Zone5
-    rageTarget: 200
-    availableImps: 10
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic town
+    - Business center
+    rageTarget: 400
+    availableImps: 12
+    patrolling: 0
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
+    availableExorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    - Business
+    - Suburbs
+    - Entertainment
+    rageTarget: 500
+    availableImps: 15
     patrolling: 0
