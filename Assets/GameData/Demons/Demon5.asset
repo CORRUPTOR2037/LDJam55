@@ -20,4 +20,4 @@ MonoBehaviour:
   fightTime: 10
   impsCount: 3
   rageMult: 1
-  specialization: 1
+  specialization: 0
