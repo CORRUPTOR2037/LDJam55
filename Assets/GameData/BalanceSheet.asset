@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba840cdce25482047b06ff5a8302c9b9, type: 3}
+  m_Name: BalanceSheet
+  m_EditorClassIdentifier: 
+  dayLength: 100
+  eventSpawnTime: {x: 5, y: 10}
+  timeForImpFighting: 2
+  daysSettings:
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    availableExorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    availableZones:
+    - Zone1
+    - Zone2
+    - Zone4
+    rageTarget: 10
+    availableImps: 5
+    patrolling: 0
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    availableExorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    availableZones:
+    - Zone1
+    - Zone2
+    - Zone4
+    - Zone5
+    rageTarget: 15
+    availableImps: 7
+    patrolling: 0
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    availableExorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    availableZones:
+    - Zone1
+    - Zone2
+    - Zone3
+    - Zone4
+    - Zone5
+    rageTarget: 20
+    availableImps: 10
+    patrolling: 0
