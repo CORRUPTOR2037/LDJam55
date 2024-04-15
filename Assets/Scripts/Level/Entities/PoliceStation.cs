@@ -98,7 +98,7 @@ public class PoliceStation : MonoBehaviour
             roadSystem.SendCarTo(car, zone.centerPoint);
         }
         car.destination = zone;
-        car.exorcist = exorcistSlots[slot];
+        car.SetExorcist(exorcistSlots[slot]);
         car.patrolling = patrolling;
         car.onArrivedEvent = OnCarArrivedToZone;
         car.gameObject.SetActive(true);

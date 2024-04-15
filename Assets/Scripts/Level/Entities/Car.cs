@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Collections;
 using UnityEngine;
 
 public class Car : MonoBehaviour
@@ -12,6 +13,7 @@ public class Car : MonoBehaviour
     [DisplayWithoutEdit] public Zone destination;
     [DisplayWithoutEdit] public Exorcist exorcist;
     [DisplayWithoutEdit] public bool patrolling, fighting;
+    [SerializeField] private SerializableDictionary<Exorcist, GameObject> meshes;
     public Action<Car> onArrivedEvent;
 
     public void SetDestination(ShortestPath path, bool isForward)
@@ -26,6 +28,15 @@ public class Car : MonoBehaviour
                 currentWaypointIndex = i;
                 currentPoint = path[i];
             }
+    }
+
+    public void SetExorcist(Exorcist exorcist)
+    {
+        this.exorcist = exorcist;
+        foreach (var mesh in meshes)
+        {
+            mesh.Value.SetActive(mesh.Key == exorcist);
+        }
     }
 
     public void Move()

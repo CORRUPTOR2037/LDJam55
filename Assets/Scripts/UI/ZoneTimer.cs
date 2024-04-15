@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ZoneTimer : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI timerText, ragePerSecond, impsCount;
+    [SerializeField] private TextMeshProUGUI ragePerSecond, impsCount;
     [SerializeField] private Image border, demonImage;
     private bool isForward;
 
@@ -57,7 +57,5 @@ public class ZoneTimer : MonoBehaviour
             }
             border.fillAmount = timer / maxTimer;
         }
-        timerText.text = ((int) timer / 60).ToString("00") + ":" + ((int) timer % 60).ToString("00");
-        
     }
 }
