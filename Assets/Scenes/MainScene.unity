@@ -4007,7 +4007,7 @@ MonoBehaviour:
   zoomSpeed: 15
   zoomLimits: {x: 10, y: 30}
   moveLimitsX: {x: -40, y: 27}
-  moveLimitsZ: {x: -75, y: 0}
+  moveLimitsZ: {x: -90, y: 0}
   mouseBlocker: {fileID: 930495030}
 --- !u!114 &930495026
 MonoBehaviour:

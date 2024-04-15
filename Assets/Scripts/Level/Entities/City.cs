@@ -120,6 +120,20 @@ public class City : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (dayProgress < 1) return;
+        if (Input.GetKey(KeyCode.KeypadPlus))
+        {
+            Reset();
+        }
+        else if (Input.GetKey(KeyCode.KeypadMinus))
+        {
+            day -= 2;
+            Reset();
+        }
+    }
+
     private void AssignEvent()
     {
         List<Zone> possibleZones = new List<Zone>();
