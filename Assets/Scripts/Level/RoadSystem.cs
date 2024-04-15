@@ -96,6 +96,8 @@ public class RoadSystem : MonoBehaviour
         }
 
         distance[start] = 0;
+        float alt;
+        Transform neighbor;
 
         // A* algorithm
         while (unvisited.Count > 0)
@@ -115,16 +117,27 @@ public class RoadSystem : MonoBehaviour
 
             foreach (Road road in roads)
             {
-                if (System.Array.IndexOf(road.points, current) != -1)
+                var index = System.Array.IndexOf(road.points, current);
+                if (index < 0) continue;
+
+                if (index - 1 >= 0)
                 {
-                    foreach (Transform neighbor in road.points)
+                    neighbor = road.points[index - 1];
+                    alt = distance[current] + Vector3.Distance(current.position, neighbor.position);
+                    if (alt < distance[neighbor])
                     {
-                        float alt = distance[current] + Vector3.Distance(current.position, neighbor.position);
-                        if (alt < distance[neighbor])
-                        {
-                            distance[neighbor] = alt;
-                            previous[neighbor] = current;
-                        }
+                        distance[neighbor] = alt;
+                        previous[neighbor] = current;
+                    }
+                }
+                if (index + 1 < road.points.Length)
+                {
+                    neighbor = road.points[index + 1];
+                    alt = distance[current] + Vector3.Distance(current.position, neighbor.position);
+                    if (alt < distance[neighbor])
+                    {
+                        distance[neighbor] = alt;
+                        previous[neighbor] = current;
                     }
                 }
             }
