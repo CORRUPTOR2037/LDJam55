@@ -19,6 +19,7 @@ public class City : MonoBehaviour
     [SerializeField] private Gradient sunColor;
     [SerializeField] private SerializableDictionary<float, Toggle> timeToggles;
     [SerializeField] private CountSpawner rageCounterSpawner;
+    [SerializeField] private AudioClip music1, music2;
 
     private int day = 0, hour, minute;
     private float dayProgress = 0, untilNextEvent;
@@ -79,6 +80,7 @@ public class City : MonoBehaviour
         policeStation.Reset(exorcistsSettings);
         camera.SetBlockerActive(false);
         dayStarted = true;
+        AudioManager.PlayMusic(day % 2 == 1 ? music1 : music2);
         Update();
     }
 

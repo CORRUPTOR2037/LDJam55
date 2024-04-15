@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 252255442}
-  m_IndirectSpecularColor: {r: 0.58982074, g: 0.6440543, b: 0.7567272, a: 1}
+  m_IndirectSpecularColor: {r: 0.589821, g: 0.6440548, b: 0.75672835, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3521,6 +3521,8 @@ MonoBehaviour:
     - Key: 3
       Value: {fileID: 1996770558}
   rageCounterSpawner: {fileID: 65030725}
+  music1: {fileID: 8300000, guid: c30ca6cce83facd4d8136f86844bb3d1, type: 3}
+  music2: {fileID: 8300000, guid: 62f59233f6079474695dab6cba858c1e, type: 3}
   maxRage: 0
   currentRage: 0
   SelectedTimeScale: 1

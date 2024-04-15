@@ -39,10 +39,10 @@ public class AudioManager : MonoBehaviour
         _current._audio.PlayOneShot(_current._clips[name]);
     }
 
-    public static void PlayMusic()
+    public static void PlayMusic(AudioClip clip)
     {
-        if (!_current._music.isPlaying)
-            _current._music.Play();
+        _current._music.clip = clip;
+        _current._music.Play();
     }
 
     public static void StopMusic()
