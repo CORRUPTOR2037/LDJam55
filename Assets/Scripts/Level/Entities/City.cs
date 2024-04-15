@@ -163,7 +163,7 @@ public class City : MonoBehaviour
     {
         Time.timeScale = SelectedTimeScale = val;
         foreach (var toggle in timeToggles)
-            toggle.Value.SetIsOnWithoutNotify(Mathf.Approximately(val, toggle.Key));
+            toggle.Value.SetIsOnWithoutNotify(Mathf.Abs(val - toggle.Key) < 0.1f);
     }
 
     public void RevertTimeScale()
