@@ -16,8 +16,8 @@ MonoBehaviour:
   DescriptionKey: Naama is tough and rational. She easily manipulates feelings and
     emotions.
   Sprite: {fileID: 21300000, guid: eee58f9e2d48ce445baed964beaa71bf, type: 3}
-  reloadTime: 15
-  fightTime: 10
+  reloadTime: 10
+  fightTime: 5
   impsCount: 2
-  rageMult: 1
+  rageMult: 5
   specialization: 1

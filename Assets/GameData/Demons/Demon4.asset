@@ -16,8 +16,8 @@ MonoBehaviour:
   DescriptionKey: Astarte is the youngest demon. She has a great understanding of
     technology.
   Sprite: {fileID: 21300000, guid: 74559e0bd9d17d9429fbe519e49ddf82, type: 3}
-  reloadTime: 25
+  reloadTime: 10
   fightTime: 5
-  impsCount: 4
-  rageMult: 1
+  impsCount: 2
+  rageMult: 5
   specialization: 3

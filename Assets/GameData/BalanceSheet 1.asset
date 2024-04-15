@@ -10,48 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba840cdce25482047b06ff5a8302c9b9, type: 3}
-  m_Name: BalanceSheet
+  m_Name: BalanceSheet 1
   m_EditorClassIdentifier: 
-  dayLength: 60
-  timeToTakeEvent: {x: 10, y: 15}
-  eventSpawnTime: {x: 3, y: 4}
-  timeForImpFighting: 5
+  dayLength: 100
+  timeToTakeEvent: {x: 10, y: 30}
+  eventSpawnTime: {x: 5, y: 10}
+  timeForImpFighting: 2
   totalDays: 10
-  startRage: 500
-  maxRage: 1000
-  rageDecreasePerSecond: 8
-  suspicionRaisePerSecond: 0.005
-  suspicionFadePerSecond: 0.001
-  penaltyForDeath: 50
+  startRage: 20
+  maxRage: 100
+  rageDecreasePerSecond: 0.5
+  suspicionRaisePerSecond: 0.01
+  suspicionFadePerSecond: 0.005
+  penaltyForDeath: 25
   daysSettings:
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
     availableZones:
-    - South
-    - Industrial
-    availableImps: 1
-  - availableDemons:
-    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
-    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    availableZones:
-    - South
-    - Industrial
-    - Academic
-    availableImps: 3
-  - availableDemons:
-    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
-    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
-    availableZones:
     - Central
+    - Shopping
     - South
     - Industrial
-    - Academic
     availableImps: 5
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    availableImps: 7
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
     - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
     availableZones:
     - Central
@@ -70,8 +64,7 @@ MonoBehaviour:
     - South
     - Industrial
     - Academic
-    - Business
-    availableImps: 9
+    availableImps: 10
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
@@ -84,97 +77,119 @@ MonoBehaviour:
     - Industrial
     - Academic
     - Business
-    - Suburbs
-    availableImps: 11
-  - availableDemons:
-    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
-    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
-    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
-    availableZones:
-    - Central
-    - Shopping
-    - South
-    - Industrial
-    - Academic
-    - Business
-    - Suburbs
-    availableImps: 13
-  - availableDemons:
-    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
-    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
-    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
-    - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
-    availableZones:
-    - Central
-    - Shopping
-    - South
-    - Industrial
-    - Academic
-    - Business
-    - Suburbs
-    availableImps: 11
-  - availableDemons:
-    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
-    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
-    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
-    - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
-    availableZones:
-    - Central
-    - Shopping
-    - South
-    - Industrial
-    - Academic
-    - Business
-    - Suburbs
-    - Entertainment
-    availableImps: 9
-  - availableDemons:
-    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
-    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
-    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
-    - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
-    availableZones:
-    - Central
-    - Shopping
-    - South
-    - Industrial
-    - Academic
-    - Business
-    - Suburbs
-    - Entertainment
     availableImps: 7
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    - Business
+    - Suburbs
+    availableImps: 12
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    - Business
+    - Suburbs
+    availableImps: 15
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    - Business
+    - Suburbs
+    availableImps: 10
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    - Business
+    - Suburbs
+    - Entertainment
+    availableImps: 16
+  - availableDemons:
+    - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
+    - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
+    - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
+    - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+    - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
+    availableZones:
+    - Central
+    - Shopping
+    - South
+    - Industrial
+    - Academic
+    - Business
+    - Suburbs
+    - Entertainment
+    availableImps: 20
   exorcistsSettings:
-  - maxRageLevel: 200
+  - maxRageLevel: 21
     exorcists:
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     patrolling: 0
-  - maxRageLevel: 400
+  - maxRageLevel: 41
     exorcists:
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     patrolling: 0
-  - maxRageLevel: 600
+  - maxRageLevel: 61
     exorcists:
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
-    - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
-    patrolling: 0
-  - maxRageLevel: 800
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 1
+  - maxRageLevel: 81
     exorcists:
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
-    - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
-    - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
-    patrolling: 0
-  - maxRageLevel: 975
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 1
+  - maxRageLevel: 100
     exorcists:
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
-    - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
-    - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
-    - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
-    - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
-    patrolling: 0
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 1
