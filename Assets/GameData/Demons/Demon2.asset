@@ -15,7 +15,7 @@ MonoBehaviour:
   NameKey: Naama
   DescriptionKey: Naama is tough and rational. She easily manipulates feelings and
     emotions.
-  Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
+  Sprite: {fileID: 21300000, guid: eee58f9e2d48ce445baed964beaa71bf, type: 3}
   reloadTime: 15
   fightTime: 10
   impsCount: 2

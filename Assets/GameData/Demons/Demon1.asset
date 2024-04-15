@@ -15,7 +15,7 @@ MonoBehaviour:
   NameKey: Barbelo
   DescriptionKey: Barbelo possesses a charm and a sense of humor. She loves nature
     and plays with it like a toy.
-  Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
+  Sprite: {fileID: 21300000, guid: e6cc9c68f4ca0e8488ef37ac84d8d0d2, type: 3}
   reloadTime: 10
   fightTime: 15
   impsCount: 1

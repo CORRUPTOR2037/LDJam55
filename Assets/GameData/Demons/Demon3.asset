@@ -15,7 +15,7 @@ MonoBehaviour:
   NameKey: Lilith
   DescriptionKey: Playful Lilith loves to create chaos and stir up trouble in the
     human world.
-  Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
+  Sprite: {fileID: 21300000, guid: 31dcbcffa3945464bae580ccbb1baafb, type: 3}
   reloadTime: 30
   fightTime: 3
   impsCount: 5

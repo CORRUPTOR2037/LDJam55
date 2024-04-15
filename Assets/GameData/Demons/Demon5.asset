@@ -15,7 +15,7 @@ MonoBehaviour:
   NameKey: Willow
   DescriptionKey: Willow is headstrong. She easily handles any task but dislikes
     dealing with people directly.
-  Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
+  Sprite: {fileID: 21300000, guid: 3fa624f17e2fc504f8a31bd521203a1e, type: 3}
   reloadTime: 20
   fightTime: 10
   impsCount: 3
