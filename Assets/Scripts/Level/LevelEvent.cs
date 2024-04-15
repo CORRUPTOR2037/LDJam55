@@ -18,6 +18,7 @@ public class LevelEvent : ScriptableObject
             case ZoneEventType.Blue: return Color.blue;
             case ZoneEventType.Red: return Color.red;
             case ZoneEventType.Green: return Color.green;
+            case ZoneEventType.Yellow: return Color.yellow;
         };
         return Color.white;
     }

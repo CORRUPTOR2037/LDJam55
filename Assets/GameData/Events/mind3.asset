@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d38359d37af2d4eaa548d90a947ea3, type: 3}
+  m_Name: mind3
+  m_EditorClassIdentifier: 
+  NameKey: Scientific congress
+  DescriptionKey: A scientific conference will start soon. Scientists from all over
+    the country will gather. Let's give them hiccups. Maybe they will find a way
+    to stop it.
+  EventType: 1
+  DifficultyLevel: 1
