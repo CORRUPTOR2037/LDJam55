@@ -22,6 +22,7 @@ MonoBehaviour:
   rageDecreasePerSecond: 0.5
   suspicionRaisePerSecond: 0.01
   suspicionFadePerSecond: 0.005
+  penaltyForDeath: 25
   daysSettings:
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}

@@ -65,6 +65,12 @@ public class Player : MonoBehaviour
         impsCountText.text = currentImps.ToString();
     }
 
+    public void KillDemon(Demon demon)
+    {
+        demonsOnDuty.Remove(demon);
+        GetDemonCard(demon).gameObject.SetActive(false);
+    }
+
     public void LaunchEventSetting(Zone zone)
     {
         foreach (var card in demonCards)

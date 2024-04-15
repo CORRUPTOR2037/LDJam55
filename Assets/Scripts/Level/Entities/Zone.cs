@@ -183,14 +183,25 @@ public class Zone : MonoBehaviour
 
     private void UpdateColor()
     {
-        selector.color = CurrentColor(Selected ? 1 : (mouseOn ? 0.6f : 0.1f));
+        selector.color = CurrentColor(Selected ? 1 : Mathf.Max(SuspicionLevel, mouseOn ? 0.6f : 0.1f));
     }
 
     public void RevokeDemon()
     {
-        float damageToDemon = State == ZoneState.Fighting ? Mathf.Max(0, AssignedDemon.fightTime - fightingTimer.timer * AssignedExorcist.FightSpeedMult) : 0;
+        if (AssignedDemon == null) return;
+
+        if (fightingTimer.timer < 0.1f)
+        {
+            player.KillDemon(AssignedDemon);
+            city.AddRage(-balanceSheet.penaltyForDeath);
+        }
+        else
+        {
+            float damageToDemon = State == ZoneState.Fighting ? Mathf.Max(0, AssignedDemon.fightTime - fightingTimer.timer * AssignedExorcist.FightSpeedMult) : 0;
+            player.RevokeDemon(AssignedDemon, AssignedImps, damageToDemon);
+        }
         State = ZoneState.Resting;
-        player.RevokeDemon(AssignedDemon, AssignedImps, damageToDemon);
+        AssignedDemon = null;
         OnStateUpdated();
     }
 

@@ -10,6 +10,7 @@ public class BalanceSheet : ScriptableObject
     public int timeForImpFighting;
     public int totalDays;
     public float startRage, maxRage, rageDecreasePerSecond, suspicionRaisePerSecond, suspicionFadePerSecond;
+    public int penaltyForDeath;
     public DaySetting[] daysSettings;
     public ExorcistsConfig[] exorcistsSettings;
     public DaySetting CurrentDay(int index) => daysSettings[Mathf.Clamp(index - 1, 0, daysSettings.Length - 1)];

@@ -18,6 +18,7 @@ public class City : MonoBehaviour
     [SerializeField] private Light sun;
     [SerializeField] private Gradient sunColor;
     [SerializeField] private SerializableDictionary<float, Toggle> timeToggles;
+    [SerializeField] private CountSpawner rageCounterSpawner;
 
     private int day = 0, hour, minute;
     private float dayProgress = 0, untilNextEvent;
@@ -139,6 +140,8 @@ public class City : MonoBehaviour
     public void AddRage(int value)
     {
         currentRage = Mathf.Clamp(currentRage + value, 0, maxRage);
+        if (value > 0)
+            rageCounterSpawner.SpawnParticle(value);
     }
 
     private void OnDayEnd(bool result)
