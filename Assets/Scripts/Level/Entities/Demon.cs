@@ -15,5 +15,5 @@ public class Demon : ScriptableObject
 
 public enum ZoneEventType
 {
-    Red, Green, Blue
+    Red, Green, Blue, Yellow
 }
