@@ -64,9 +64,10 @@ public class City : MonoBehaviour
         var exorcistsSettings = balanceSheet.CurrentExorcistsSetting(currentRage);
         dayProgress = 0;
         untilNextEvent = 3;
+        currentRage = Mathf.Clamp(currentRage, balanceSheet.rageLimitsOnDayStart.x, balanceSheet.rageLimitsOnDayStart.y);
         
         globalRageSlider.value = currentRage;
-        Time.timeScale = 1;
+        RevertTimeScale();
         foreach (var zone in zones)
         {
             zone.gameObject.SetActive(daySettings.availableZones.Contains(zone.zoneName));
@@ -177,5 +178,10 @@ public class City : MonoBehaviour
     public void RevertTimeScale()
     {
         Time.timeScale = SelectedTimeScale;
+    }
+
+    public void SkipDay()
+    {
+        Time.timeScale = 50;
     }
 }

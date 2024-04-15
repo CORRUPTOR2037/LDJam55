@@ -116,36 +116,27 @@ public class Zone : MonoBehaviour
                 break;
             case ZoneState.OfferingEvent:
             {
+                canvas.gameObject.SetActive(true);
                 actingTimer.gameObject.SetActive(false);
                 fightingTimer.gameObject.SetActive(false);
-                if (!offeringTimer.gameObject.activeSelf)
-                {
-                    canvas.gameObject.SetActive(true);
-                    offeringTimer.gameObject.SetActive(true);
-                }
+                offeringTimer.gameObject.SetActive(true);
             } break;
             case ZoneState.ActingEvent:
             {
+                canvas.gameObject.SetActive(true);
                 offeringTimer.gameObject.SetActive(false);
                 fightingTimer.gameObject.SetActive(false);
-                if (!actingTimer.gameObject.activeSelf)
-                {
-                    canvas.gameObject.SetActive(true);
-                    actingTimer.gameObject.SetActive(true);
-                }
+                actingTimer.gameObject.SetActive(true);
                 rageTimer = 0;
                 policeStation.RequestTo(this);
             }
             break;
             case ZoneState.Fighting:
             {
+                canvas.gameObject.SetActive(true);
                 offeringTimer.gameObject.SetActive(false);
                 actingTimer.gameObject.SetActive(false);
-                if (!fightingTimer.gameObject.activeSelf)
-                {
-                    canvas.gameObject.SetActive(true);
-                    fightingTimer.gameObject.SetActive(true);
-                }
+                fightingTimer.gameObject.SetActive(true);
             }
             break;
         }

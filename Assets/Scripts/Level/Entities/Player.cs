@@ -95,6 +95,7 @@ public class Player : MonoBehaviour
             demonsOnDuty.Add(selectedZone.AssignedDemon);
             selectedZone.StartAction();
             GetDemonCard(selectedZone.AssignedDemon).SetDeactivated(true);
+            impsCountText.text = currentImps.ToString();
         }
     }
 

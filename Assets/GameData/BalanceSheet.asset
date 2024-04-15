@@ -22,6 +22,7 @@ MonoBehaviour:
   rageDecreasePerSecond: 8
   suspicionRaisePerSecond: 0.005
   suspicionFadePerSecond: 0.001
+  rageLimitsOnDayStart: {x: 180, y: 900}
   penaltyForDeath: 50
   daysSettings:
   - availableDemons:
@@ -151,9 +152,11 @@ MonoBehaviour:
   - maxRageLevel: 200
     exorcists:
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     patrolling: 0
   - maxRageLevel: 400
     exorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
     patrolling: 0
@@ -170,7 +173,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
     - {fileID: 11400000, guid: d3fdc70f556fbad43a5a621f8d4cfec1, type: 2}
     patrolling: 0
-  - maxRageLevel: 975
+  - maxRageLevel: 1000
     exorcists:
     - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}
     - {fileID: 11400000, guid: 27699d42c7a33dc448f82bdb818d406b, type: 2}

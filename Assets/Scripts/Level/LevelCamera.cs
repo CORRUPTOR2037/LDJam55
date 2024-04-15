@@ -42,6 +42,7 @@ public class LevelCamera : MonoBehaviour
         // Add delta zoom to the camera's orthographic size
         float newZoom = Mathf.Clamp(mainCamera.orthographicSize - deltaZoom * zoomSpeed, zoomLimits.x, zoomLimits.y);
         mainCamera.orthographicSize = newZoom;
+        MoveCamera(0, 0);
     }
 
     public void SetBlockerActive(bool value) => mouseBlocker.enabled = value;
