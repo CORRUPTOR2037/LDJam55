@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 800
-  m_AmbientSkyColor: {r: 0.7529412, g: 0.70980394, b: 0.7372549, a: 1}
+  m_AmbientSkyColor: {r: 0.6886792, g: 0.58147913, b: 0.6496974, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 4
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 252255442}
-  m_IndirectSpecularColor: {r: 0.589821, g: 0.6440548, b: 0.75672835, a: 1}
+  m_IndirectSpecularColor: {r: 0.58982074, g: 0.6440543, b: 0.7567272, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2ec7672ae25a12946b0bdcdf330862cf, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 68c5f1562575e424d969765f7115bb88, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 49eb6e7479ed86c4690b4407b1521930, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 25e75bbcf67df4d4ab001db4e8260f4f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -300,7 +300,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.93333334, g: 1, b: 0.8666667, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 1.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1401,9 +1401,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5549256771798393634, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7172667267054993745, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
       propertyPath: m_Name
       value: TreeCluster
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172667267054993745, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269495177147998516, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699170879528491393, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314519943448912641, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f8da92d47c56b64695754c5b45ff494, type: 3}
@@ -2238,8 +2258,32 @@ MonoBehaviour:
   - {fileID: 584669926}
   - {fileID: 584669925}
   events:
-  - {fileID: 11400000, guid: aa580c9a1dccead4882be2b9a095efe8, type: 2}
-  hoursLimits: {x: 8, y: 24}
+  - {fileID: 11400000, guid: 74a67c2beca2a7c4694eed63188bfbda, type: 2}
+  - {fileID: 11400000, guid: 41f92d496cb833d4080c8347dba02b4e, type: 2}
+  - {fileID: 11400000, guid: fdad8fef85da38145b23d70249ab0803, type: 2}
+  - {fileID: 11400000, guid: bee04a153977f17439ea5a71d49c06dc, type: 2}
+  - {fileID: 11400000, guid: ce0a2d1495552844ebfd09746bf1b534, type: 2}
+  - {fileID: 11400000, guid: 1cbf7cb92701e404dadc92580bf3ce90, type: 2}
+  - {fileID: 11400000, guid: c2d1556b83e802440a5416f69cd0b3d8, type: 2}
+  - {fileID: 11400000, guid: bafa616bf2f2fa9408e5300988bb2075, type: 2}
+  - {fileID: 11400000, guid: 33375c68ff8ad1d4f84cd82ac7e23d5b, type: 2}
+  - {fileID: 11400000, guid: 38648e80f689b3c48acda01dc43c0e19, type: 2}
+  - {fileID: 11400000, guid: ca5bd4b563f659d459415b4a4b71dc10, type: 2}
+  - {fileID: 11400000, guid: 86ce148ce11de9749a837dbef1f5a40c, type: 2}
+  - {fileID: 11400000, guid: bc28d2ba0f86f1b47bd7e43fbc17dd90, type: 2}
+  - {fileID: 11400000, guid: d1c65e9c6a6c33c4ab120f4483b4cc84, type: 2}
+  - {fileID: 11400000, guid: eeb8d60001f3af646a1602d512922e23, type: 2}
+  - {fileID: 11400000, guid: 9d4cc171aa47f654f90c9854241e6120, type: 2}
+  - {fileID: 11400000, guid: 1e89a8a39b41f25489c0654208b11219, type: 2}
+  - {fileID: 11400000, guid: 8dda19d880c48b445a52af7eb8655ca0, type: 2}
+  - {fileID: 11400000, guid: 2c85297352e6d12408c757f77ad2397d, type: 2}
+  - {fileID: 11400000, guid: 8b2dd89254bc21c44abf37541e6a000c, type: 2}
+  - {fileID: 11400000, guid: 3877dc239529d964caaea2607dc5701f, type: 2}
+  - {fileID: 11400000, guid: 9eb84a421abae334cae81f81e065ada2, type: 2}
+  - {fileID: 11400000, guid: afaeba5cbffc4434280bb12ed58d01dc, type: 2}
+  - {fileID: 11400000, guid: b6dbfd9db450e134c8005a76ea09b015, type: 2}
+  - {fileID: 11400000, guid: 165ba49aee362a54e963ef861e25cf9b, type: 2}
+  hoursLimits: {x: 12, y: 24}
   dayField: {fileID: 1846721772}
   timeField: {fileID: 264618884}
   dayProgressSlider: {fileID: 1944343244}
@@ -2790,6 +2834,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1678378994}
     m_Modifications:
+    - target: {fileID: 1626750598415024590, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2145682560763809663, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2834,9 +2882,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4108081549644562827, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446976884604332641, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4782185429797668239, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
       propertyPath: m_Name
       value: TreeLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782185429797668239, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884934728055186836, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1660f2087417bab478c8803dea8c7c86, type: 3}
@@ -3816,7 +3880,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1678378994
 Transform:
@@ -3890,6 +3954,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6659197436518178330, guid: 52703cb805385c9429dac6215c1a225a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c30ca6cce83facd4d8136f86844bb3d1, type: 3}
+    - target: {fileID: 6680430413168670769, guid: 52703cb805385c9429dac6215c1a225a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62f59233f6079474695dab6cba858c1e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52703cb805385c9429dac6215c1a225a, type: 3}
 --- !u!1 &1846721769
@@ -4449,6 +4521,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
   - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
   - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
+  - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
   demonCards: []
   demonCardPrefab: {fileID: 405896347}
   impsCountText: {fileID: 1076305788}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adecc829aa02b2048a7c6f75ea32f283, type: 3}
   m_Name: Demon2
   m_EditorClassIdentifier: 
-  NameKey: Demon 2
+  NameKey: Naama
   Sprite: {fileID: 21300000, guid: e2c7e5dfb8f0c6448b6c76f86dc00bb8, type: 3}
-  reloadTime: 2
-  fightTime: 15
+  reloadTime: 15
+  fightTime: 10
   impsCount: 2
   rageMult: 1
   specialization: 1
