@@ -190,7 +190,7 @@ public class Zone : MonoBehaviour
     {
         if (AssignedDemon == null) return;
 
-        if (fightingTimer.timer < 0.1f)
+        if (State == ZoneState.Fighting && fightingTimer.timer < 0.1f)
         {
             player.KillDemon(AssignedDemon);
             city.AddRage(-balanceSheet.penaltyForDeath);
@@ -225,6 +225,7 @@ public class Zone : MonoBehaviour
         State = ZoneState.Fighting;
         AssignedExorcist = exorcist;
         fightingTimer.SetupFight(AssignedDemon, (AssignedDemon.fightTime + AssignedImps * balanceSheet.timeForImpFighting) / exorcist.FightSpeedMult);
+        fightingTimer.UpdateImpsCount(AssignedImps);
         killImpTimer = balanceSheet.timeForImpFighting;
         OnStateUpdated();
     }
