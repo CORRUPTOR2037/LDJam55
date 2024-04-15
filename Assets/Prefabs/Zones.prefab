@@ -1378,9 +1378,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Business
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 3868935340290166765}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (1)
+      value: Business
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite
@@ -1444,9 +1452,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: South
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 5071939999907552344}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (3)
+      value: South
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite
@@ -1510,9 +1526,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Entertainment
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 2893886641259986548}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone
+      value: Entertainment
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite
@@ -1576,9 +1600,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Shopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 2882448745677163728}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (5)
+      value: Shopping
       objectReference: {fileID: 0}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_IsActive
@@ -1646,9 +1678,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Central
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 8041187889045317096}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (4)
+      value: Central
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite
@@ -1712,9 +1752,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Suburbs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 2722114250689614408}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (2)
+      value: Suburbs
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite
@@ -1778,9 +1826,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Industrial
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 6394985147028998312}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (6)
+      value: Industrial
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite
@@ -1844,9 +1900,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2078253179911895181}
     m_Modifications:
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: zoneName
+      value: Academic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548777079487480104, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
+      propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 4005209472100102461}
     - target: {fileID: 2783246254252824425, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Name
-      value: Zone (7)
+      value: Academic
       objectReference: {fileID: 0}
     - target: {fileID: 3107373607311001472, guid: eb9389d196d8e59418268d99cf7872fe, type: 3}
       propertyPath: m_Sprite

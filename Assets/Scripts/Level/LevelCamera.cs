@@ -31,10 +31,10 @@ public class LevelCamera : MonoBehaviour
     public void MoveCamera(float x, float y)
     {
         // Add delta movement to the camera position
-        Vector3 newPosition = transform.position;
-        newPosition.x = Mathf.Clamp(newPosition.x - x * moveSpeed, moveLimitsX.x, moveLimitsX.y);
-        newPosition.z = Mathf.Clamp(newPosition.z - y * moveSpeed, moveLimitsZ.x, moveLimitsZ.y);
-        transform.position = newPosition;
+        Vector3 newPosition = transform.localPosition;
+        newPosition.x = Mathf.Clamp(newPosition.x - x * moveSpeed, moveLimitsX.x + mainCamera.orthographicSize, moveLimitsX.y - mainCamera.orthographicSize);
+        newPosition.z = Mathf.Clamp(newPosition.z - y * moveSpeed, moveLimitsZ.x + mainCamera.orthographicSize, moveLimitsZ.y - mainCamera.orthographicSize);
+        transform.localPosition = newPosition;
     }
 
     public void ZoomCamera(float deltaZoom)
