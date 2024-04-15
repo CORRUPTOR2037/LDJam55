@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adecc829aa02b2048a7c6f75ea32f283, type: 3}
   m_Name: Demon5
   m_EditorClassIdentifier: 
-  NameKey: Elizazdra
+  NameKey: Willow
+  DescriptionKey: Willow is headstrong. She easily handles any task but dislikes
+    dealing with people directly.
   Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
   reloadTime: 20
   fightTime: 10

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adecc829aa02b2048a7c6f75ea32f283, type: 3}
   m_Name: Demon4
   m_EditorClassIdentifier: 
-  NameKey: Astarta
+  NameKey: Astarte
+  DescriptionKey: Astarte is the youngest demon. She has a great understanding of
+    technology.
   Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
   reloadTime: 25
   fightTime: 5
