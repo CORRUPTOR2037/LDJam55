@@ -8,6 +8,7 @@ public class BalanceSheet : ScriptableObject
     public Vector2 timeToTakeEvent;
     public Vector2 eventSpawnTime;
     public int timeForImpFighting;
+    public int totalDays;
     public DaySetting[] daysSettings;
     public DaySetting CurrentDay(int index) => daysSettings[Mathf.Clamp(index - 1, 0, daysSettings.Length - 1)];
 }
