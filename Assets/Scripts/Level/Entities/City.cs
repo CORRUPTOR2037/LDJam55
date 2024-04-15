@@ -14,6 +14,8 @@ public class City : MonoBehaviour
     [SerializeField] private BalanceSheet balanceSheet;
     [SerializeField] private GameObject winPanel, losePanel, gameCompletedPanel;
     [SerializeField] private TutorialWindow tutorialWindow;
+    [SerializeField] private Light sun;
+    [SerializeField] private Gradient sunColor;
 
     private int day = 0, hour, minute;
     private float dayProgress = 0, untilNextEvent;
@@ -88,6 +90,9 @@ public class City : MonoBehaviour
         dayField.text = "Day " + day;
         timeField.text = hour.ToString("00") + ":" + minute.ToString("00");
         dayProgressSlider.value = ratio;
+        sun.color = sunColor.Evaluate(ratio);
+        sun.intensity = sunColor.Evaluate(ratio).a * 1.3f;
+        sun.transform.localEulerAngles = new Vector3(Mathf.Lerp(60, 180, ratio), -200, 0);
 
         untilNextEvent -= Time.deltaTime;
         if (untilNextEvent < 0)
