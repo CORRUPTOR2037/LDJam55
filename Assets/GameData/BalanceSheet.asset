@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BalanceSheet
   m_EditorClassIdentifier: 
   dayLength: 100
-  timeToTakeEvent: 20
+  timeToTakeEvent: {x: 10, y: 30}
   eventSpawnTime: {x: 5, y: 10}
   timeForImpFighting: 2
   daysSettings:

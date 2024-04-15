@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Police
   m_EditorClassIdentifier: 
   Name: Police
-  CarSpeed: 0.2
+  CarSpeed: 5
   FightSpeedMult: 1

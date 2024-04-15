@@ -186,7 +186,7 @@ public class Zone : MonoBehaviour
         CurrentEvent = evt;
         State = ZoneState.OfferingEvent;
         OnStateUpdated();
-        offeringTimer.SetupOffer(CurrentEvent, balanceSheet.timeToTakeEvent);
+        offeringTimer.SetupOffer(CurrentEvent, (int) UnityEngine.Random.Range(balanceSheet.timeToTakeEvent.x, balanceSheet.timeToTakeEvent.y));
     }
 
     public void StartAction()

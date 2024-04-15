@@ -5,7 +5,7 @@ using UnityEngine;
 public class BalanceSheet : ScriptableObject
 {
     public int dayLength;
-    public int timeToTakeEvent;
+    public Vector2 timeToTakeEvent;
     public Vector2 eventSpawnTime;
     public int timeForImpFighting;
     public DaySetting[] daysSettings;
