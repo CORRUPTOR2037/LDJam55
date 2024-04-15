@@ -48,12 +48,12 @@ public class PoliceStation : MonoBehaviour
         }
     }
 
-    public void Reset(DaySetting settings)
+    public void Reset(ExorcistsConfig settings)
     {
         queue.Clear();
         clock = 0;
         patrolling = settings.patrolling;
-        exorcistSlots = settings.availableExorcists;
+        exorcistSlots = settings.exorcists;
         roadSystem.DeactivateAllCars();
         sentExorcists = new Car[exorcistSlots.Length];
     }

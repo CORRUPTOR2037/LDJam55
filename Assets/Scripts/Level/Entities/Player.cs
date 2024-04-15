@@ -15,12 +15,18 @@ public class Player : MonoBehaviour
 
     private List<Demon> demonsOnDuty = new List<Demon>();
     private int currentImps, maxImps;
+    private City city;
     private Zone selectedZone;
 
     private void Awake()
     {
         GameInstancesHolder.Register(this);
         settingEventPanel.onClosed = OnSettingPanelClosed;
+    }
+
+    private void Start()
+    {
+        city = GameInstancesHolder.Get<City>();
     }
 
     public void Reset(DaySetting settings)
@@ -66,6 +72,7 @@ public class Player : MonoBehaviour
                 card.button.interactable = true;
         selectedZone = zone;
         settingEventPanel.availableImps = currentImps;
+        Time.timeScale = 0;
         settingEventPanel.Show(zone);
     }
 
@@ -73,6 +80,7 @@ public class Player : MonoBehaviour
     {
         foreach (var card in demonCards)
             card.button.interactable = false;
+        city.RevertTimeScale();
         if (value)
         {
             currentImps -= settingEventPanel.imps;
@@ -107,22 +115,19 @@ public class Player : MonoBehaviour
         return null;
     }
 
-    private float prevTimeScale;
-
     private void Update()
     {
         if (Input.GetButtonDown("Cancel"))
         {
             if (!menu.gameObject.activeSelf)
             {
-                prevTimeScale = Time.timeScale;
                 Time.timeScale = 0;
                 menu.gameObject.SetActive(true);
                 menu.SetEnabled(true);
             }
             else
             {
-                Time.timeScale = prevTimeScale;
+                city.RevertTimeScale();
                 menu.SetEnabled(false);
                 menu.gameObject.SetActive(false);
             }

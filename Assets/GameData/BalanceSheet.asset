@@ -17,67 +17,47 @@ MonoBehaviour:
   eventSpawnTime: {x: 5, y: 10}
   timeForImpFighting: 2
   totalDays: 10
+  startRage: 20
+  maxRage: 100
+  rageDecreasePerSecond: 0.5
+  suspicionRaisePerSecond: 0.01
+  suspicionFadePerSecond: 0.005
   daysSettings:
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    availableExorcists:
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
     - Central
     - Shopping
     - South
     - Industrial
-    rageTarget: 100
     availableImps: 5
-    patrolling: 0
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
-    availableExorcists:
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
     - Central
     - Shopping
     - South
     - Industrial
     - Academic
-    rageTarget: 150
     availableImps: 7
-    patrolling: 0
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
     - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
-    availableExorcists:
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
     - Central
     - Shopping
     - South
     - Industrial
     - Academic
-    rageTarget: 300
     availableImps: 10
-    patrolling: 0
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
     - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
     - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
-    availableExorcists:
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
     - Central
     - Shopping
@@ -85,21 +65,13 @@ MonoBehaviour:
     - Industrial
     - Academic
     - Business
-    rageTarget: 400
     availableImps: 12
-    patrolling: 0
   - availableDemons:
     - {fileID: 11400000, guid: 213d40b8446c5774a90c35f2c5b35c97, type: 2}
     - {fileID: 11400000, guid: ec5395108f6ce7c40bd3e6a3939ec0a0, type: 2}
     - {fileID: 11400000, guid: 88406316c399cdc449fab864922a2a4a, type: 2}
     - {fileID: 11400000, guid: 9baab6eeab6f74a4b87301a2b96cd767, type: 2}
     - {fileID: 11400000, guid: 84c6a53b02145dd498ea66d7e7a3fe1a, type: 2}
-    availableExorcists:
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
-    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     availableZones:
     - Central
     - Shopping
@@ -109,6 +81,45 @@ MonoBehaviour:
     - Business
     - Suburbs
     - Entertainment
-    rageTarget: 500
     availableImps: 15
+  exorcistsSettings:
+  - maxRageLevel: 21
+    exorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
     patrolling: 0
+  - maxRageLevel: 41
+    exorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 0
+  - maxRageLevel: 61
+    exorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 1
+  - maxRageLevel: 81
+    exorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 1
+  - maxRageLevel: 100
+    exorcists:
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    - {fileID: 11400000, guid: c0dc708118cadf643916882f5ee4915e, type: 2}
+    patrolling: 1

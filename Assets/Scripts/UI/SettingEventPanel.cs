@@ -36,7 +36,6 @@ public class SettingEventPanel : MonoBehaviour
         eventDescription.text = zone.CurrentEvent.DescriptionKey;
         eventType.text = zone.CurrentEvent.ShortType;
         gameObject.SetActive(true);
-        Time.timeScale = 0;
         if (camera == null)
             camera = GameInstancesHolder.Get<LevelCamera>();
         camera.SetBlockerActive(true);
@@ -47,7 +46,6 @@ public class SettingEventPanel : MonoBehaviour
         zone.SetSelected(false);
         gameObject.SetActive(false);
         camera.SetBlockerActive(false);
-        Time.timeScale = 1;
         onClosed.Invoke(result);
     }
 

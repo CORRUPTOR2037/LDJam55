@@ -88,14 +88,22 @@ public class Zone : MonoBehaviour
                 fightingTimer.UpdateImpsCount(AssignedImps);
             }
         }
-        if (State == ZoneState.ActingEvent || State == ZoneState.Fighting)
+        if ((State == ZoneState.ActingEvent || State == ZoneState.Fighting) && SuspicionLevel < 0.99)
         {
             rageTimer += Time.deltaTime;
             if (rageTimer >= 1)
             {
                 rageTimer -= 1;
-                city.AddRage(DamagePerSecond);
+                var damage = DamagePerSecond;
+                SuspicionLevel = Mathf.Clamp01(SuspicionLevel + damage * balanceSheet.suspicionRaisePerSecond);
+                city.AddRage(damage);
+                UpdateColor();
             }
+        }
+        if (State == ZoneState.Resting || State == ZoneState.OfferingEvent)
+        {
+            SuspicionLevel = Mathf.Clamp01(SuspicionLevel - balanceSheet.suspicionFadePerSecond * Time.deltaTime);
+            UpdateColor();
         }
     }
 
@@ -146,13 +154,13 @@ public class Zone : MonoBehaviour
     void OnMouseOver()
     {
         if (!Input.GetMouseButton(0))
-            selector.color = CurrentColor(Selected ? 1 : 0.6f);
+            UpdateColor();
         mouseOn = true;
     }
 
     void OnMouseExit()
     {
-        selector.color = CurrentColor(Selected ? 1 : 0.3f);
+        UpdateColor();
         mouseOn = false;
     }
 
@@ -161,7 +169,7 @@ public class Zone : MonoBehaviour
     public void SetSelected(bool value)
     {
         Selected = value;
-        selector.color = CurrentColor(Selected ? 1 : (mouseOn ? 0.6f : 0.3f));
+        UpdateColor();
         if (Selected)
             onClick.Invoke(this);
     }
@@ -171,6 +179,11 @@ public class Zone : MonoBehaviour
         var color = suspicionGradient.Evaluate(SuspicionLevel);
         color.a = alpha;
         return color;
+    }
+
+    private void UpdateColor()
+    {
+        selector.color = CurrentColor(Selected ? 1 : (mouseOn ? 0.6f : 0.1f));
     }
 
     public void RevokeDemon()
