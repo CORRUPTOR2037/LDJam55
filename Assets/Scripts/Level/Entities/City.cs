@@ -28,6 +28,7 @@ public class City : MonoBehaviour
     private Player player;
     private PoliceStation policeStation;
     private new LevelCamera camera;
+    private DaySetting currentDaySetting;
 
     private void Awake()
     {
@@ -60,7 +61,7 @@ public class City : MonoBehaviour
     public void Reset()
     {
         day++;
-        var daySettings = balanceSheet.CurrentDay(day);
+        currentDaySetting = balanceSheet.CurrentDay(day);
         var exorcistsSettings = balanceSheet.CurrentExorcistsSetting(currentRage);
         dayProgress = 0;
         untilNextEvent = 3;
@@ -70,11 +71,11 @@ public class City : MonoBehaviour
         RevertTimeScale();
         foreach (var zone in zones)
         {
-            zone.gameObject.SetActive(daySettings.availableZones.Contains(zone.zoneName));
+            zone.gameObject.SetActive(currentDaySetting.availableZones.Contains(zone.zoneName));
             zone.Reset();
         }
 
-        player.Reset(daySettings);
+        player.Reset(currentDaySetting);
         policeStation.Reset(exorcistsSettings);
         camera.SetBlockerActive(false);
         dayStarted = true;
@@ -104,7 +105,7 @@ public class City : MonoBehaviour
         sun.color = sunColor.Evaluate(ratio);
         sun.intensity = sunColor.Evaluate(ratio).a * 1.3f;
         sun.transform.localEulerAngles = new Vector3(Mathf.Lerp(60, 180, ratio), -200, 0);
-        currentRage -= Time.deltaTime * balanceSheet.rageDecreasePerSecond;
+        currentRage -= Time.deltaTime * currentDaySetting.rageDecreasePerSecond;
         globalRageSlider.value = currentRage;
 
         untilNextEvent -= Time.deltaTime;

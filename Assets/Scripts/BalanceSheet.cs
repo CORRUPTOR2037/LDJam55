@@ -9,7 +9,7 @@ public class BalanceSheet : ScriptableObject
     public Vector2 eventSpawnTime;
     public int timeForImpFighting;
     public int totalDays;
-    public float startRage, maxRage, rageDecreasePerSecond, suspicionRaisePerSecond, suspicionFadePerSecond;
+    public float startRage, maxRage, suspicionRaisePerSecond, suspicionFadePerSecond;
     public Vector2 rageLimitsOnDayStart;
     public int penaltyForDeath;
     public DaySetting[] daysSettings;
@@ -32,6 +32,7 @@ public class DaySetting
     public Demon[] availableDemons;
     public List<string> availableZones;
     public int availableImps;
+    public float rageDecreasePerSecond;
 }
 
 [System.Serializable]

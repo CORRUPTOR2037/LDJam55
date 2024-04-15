@@ -2659,8 +2659,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -30.000006, y: -30}
+  m_AnchoredPosition: {x: 0, y: -60.780388}
+  m_SizeDelta: {x: -30, y: -151.5608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9074915621169126512
 CanvasRenderer:
@@ -2703,8 +2703,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.33
-  m_Text: 'The game was made while participating in Ludum Dare 55: April 2024. Jam
-    theme: summoning.'
+  m_Text: 'The game was made for Ludum Dare 55 of April 2024.
+
+    Jam theme: Summoning.
+
+
+    Made
+    by: pringlae, corruptor2037, Fearawl, Turbo Laser, ilyaSakhar
+
+    Stable Diffusion
+    1.5 (Anylora) was used for character portraits. '
 --- !u!1 &8631385919469596927
 GameObject:
   m_ObjectHideFlags: 0

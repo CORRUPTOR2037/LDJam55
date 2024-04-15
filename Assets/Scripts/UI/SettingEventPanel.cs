@@ -9,7 +9,7 @@ public class SettingEventPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI eventName, eventDescription, eventType, impsCount, demonName;
     [SerializeField] private GameObject demonCard;
-    [SerializeField] private Image demonImage;
+    [SerializeField] private Image demonImage, eventColor;
     [SerializeField] private Button plusImp, minusImp;
 
     [DisplayWithoutEdit] public int imps, availableImps;
@@ -35,6 +35,7 @@ public class SettingEventPanel : MonoBehaviour
         eventName.text = zone.CurrentEvent.NameKey;
         eventDescription.text = zone.CurrentEvent.DescriptionKey;
         eventType.text = zone.CurrentEvent.ShortType;
+        eventColor.color = zone.CurrentEvent.Color;
         gameObject.SetActive(true);
         if (camera == null)
             camera = GameInstancesHolder.Get<LevelCamera>();
