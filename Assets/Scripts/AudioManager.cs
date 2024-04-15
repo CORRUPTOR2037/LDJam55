@@ -49,4 +49,6 @@ public class AudioManager : MonoBehaviour
     {
         _current._music.Stop();
     }
+
+    public void PlayClick() => PlayClip("click");
 }

@@ -11,14 +11,19 @@ public class LevelEvent : ScriptableObject
 
     public string ShortType => EventType.ToString()[0] + DifficultyLevel.ToString();
 
+    private static Color RedZone = new Color(0.83f, 0.1f, 0.05f);
+    private static Color BlueZone = new Color(0.25f, 0.45f, 0.95f);
+    private static Color GreenZone = new Color(0.53f, 0.9f, 0.15f);
+    private static Color YellowZone = new Color(1f, 0.8f, 0.15f);
+
     public static Color EventColor(ZoneEventType type)
     {
         switch (type)
         {
-            case ZoneEventType.Blue: return Color.blue;
-            case ZoneEventType.Red: return Color.red;
-            case ZoneEventType.Green: return Color.green;
-            case ZoneEventType.Yellow: return Color.yellow;
+            case ZoneEventType.Blue: return BlueZone;
+            case ZoneEventType.Red: return RedZone;
+            case ZoneEventType.Green: return GreenZone;
+            case ZoneEventType.Yellow: return YellowZone;
         };
         return Color.white;
     }

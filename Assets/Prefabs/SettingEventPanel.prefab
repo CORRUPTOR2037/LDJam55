@@ -1934,7 +1934,9 @@ MonoBehaviour:
   eventDescription: {fileID: 8903919641773323440}
   eventType: {fileID: 7302509007108039932}
   impsCount: {fileID: 2114627971753359519}
-  demonCard: {fileID: 0}
+  demonName: {fileID: 4101573103430142643}
+  demonCard: {fileID: 6210954617332239804}
+  demonImage: {fileID: 2714711784440852021}
   plusImp: {fileID: 4052498180890864913}
   minusImp: {fileID: 8733443813921365531}
   imps: 0

@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class SettingEventPanel : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI eventName, eventDescription, eventType, impsCount;
-    [SerializeField] private Image demonCard;
+    [SerializeField] private TextMeshProUGUI eventName, eventDescription, eventType, impsCount, demonName;
+    [SerializeField] private GameObject demonCard;
+    [SerializeField] private Image demonImage;
     [SerializeField] private Button plusImp, minusImp;
 
     [DisplayWithoutEdit] public int imps, availableImps;
@@ -23,7 +24,6 @@ public class SettingEventPanel : MonoBehaviour
 
     private void Start()
     {
-        
         plusImp.onClick.AddListener(() => ChangeImps(1));
         minusImp.onClick.AddListener(() => ChangeImps(-1));
     }
@@ -31,7 +31,7 @@ public class SettingEventPanel : MonoBehaviour
     public void Show(Zone zone)
     {
         this.zone = zone;
-        demonCard.gameObject.SetActive(false);
+        demonCard.SetActive(false);
         eventName.text = zone.CurrentEvent.NameKey;
         eventDescription.text = zone.CurrentEvent.DescriptionKey;
         eventType.text = zone.CurrentEvent.ShortType;
@@ -54,8 +54,9 @@ public class SettingEventPanel : MonoBehaviour
         this.demon = demon;
         imps = 0;
         impsCount.text = "0/" + maxImps;
-        demonCard.gameObject.SetActive(true);
-        demonCard.sprite = demon.Sprite;
+        demonCard.SetActive(true);
+        demonName.text = demon.NameKey;
+        demonImage.sprite = demon.Sprite;
         minusImp.gameObject.SetActive(false);
         plusImp.gameObject.SetActive(maxImps > 0);
     }
