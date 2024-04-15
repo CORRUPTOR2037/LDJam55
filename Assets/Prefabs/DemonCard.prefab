@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 8923313543985049422}
   - component: {fileID: 3520193744430006324}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: CD icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 649917678644142662}
   - component: {fileID: 6444529198637384941}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.1, y: -100.75999}
+  m_AnchoredPosition: {x: -23.500025, y: -98.75999}
   m_SizeDelta: {x: 34.2219, y: 24.652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &649917678644142662
@@ -321,13 +321,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 4085481838752115798}
   - component: {fileID: 54279554629865757}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Imps count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.100002, y: -70.7}
+  m_AnchoredPosition: {x: -23.5, y: -68.7}
   m_SizeDelta: {x: 34.2219, y: 24.652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4085481838752115798
@@ -456,13 +456,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 2310467743562582717}
   - component: {fileID: 296882628874039186}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Imp icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
