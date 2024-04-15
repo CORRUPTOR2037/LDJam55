@@ -11,7 +11,7 @@ public class ZoneTimer : MonoBehaviour
     [SerializeField] private Image border, demonImage;
     private bool isForward;
 
-    private float timer;
+    public float timer { get; private set; }
     public Action onCompleted;
 
     public void SetupOffer(LevelEvent evt, int time)
@@ -22,24 +22,26 @@ public class ZoneTimer : MonoBehaviour
         isForward = false;
     }
 
-    public void SetupAct(LevelEvent evt, Demon demon, int imps)
+    public void SetupAct(LevelEvent evt, Demon demon, int imps, int damagePerSecond)
     {
         border.color = evt.Color;
         eventTypeText.text = "Событие класса " + evt.ShortType;
         demonImage.sprite = demon.Sprite;
-        ragePerSecond.text = "1/сек";
+        ragePerSecond.text = damagePerSecond + "/sec";
         impsCount.text = imps.ToString();
         isForward = true;
         timer = 0;
     }
 
-    public void SetupFight(Demon demon, int time)
+    public void SetupFight(Demon demon, float time)
     {
         eventTypeText.text = "Экзорцисты приехали!";
         demonImage.sprite = demon.Sprite;
         isForward = false;
         timer = time;
     }
+
+    public void UpdateImpsCount(int count) => impsCount.text = count.ToString();
 
     private void Update()
     {

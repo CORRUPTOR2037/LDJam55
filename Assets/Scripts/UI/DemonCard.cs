@@ -9,8 +9,11 @@ public class DemonCard : MonoBehaviour
     [SerializeField] private Image background, portrait, deactivatedOverlay;
     [SerializeField] private TextMeshProUGUI demonName, reloadStat, impsStat, rageStat;
     [SerializeField] private Slider readySlider;
+    public Button button;
 
     public Demon CardDemon { get; private set; }
+
+    public bool Deactivated => deactivatedOverlay.enabled;
 
     private float timer = -1;
     
@@ -39,6 +42,7 @@ public class DemonCard : MonoBehaviour
     {
         deactivatedOverlay.enabled = value;
         readySlider.gameObject.SetActive(false);
+        button.interactable = !value;
     }
 
     public void SetTimeout(float time)

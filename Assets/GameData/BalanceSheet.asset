@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BalanceSheet
   m_EditorClassIdentifier: 
   dayLength: 100
+  timeToTakeEvent: 30
   eventSpawnTime: {x: 5, y: 10}
   timeForImpFighting: 2
   daysSettings:
@@ -25,7 +26,7 @@ MonoBehaviour:
     - Zone1
     - Zone2
     - Zone4
-    rageTarget: 10
+    rageTarget: 100
     availableImps: 5
     patrolling: 0
   - availableDemons:
@@ -40,7 +41,7 @@ MonoBehaviour:
     - Zone2
     - Zone4
     - Zone5
-    rageTarget: 15
+    rageTarget: 150
     availableImps: 7
     patrolling: 0
   - availableDemons:
@@ -60,6 +61,6 @@ MonoBehaviour:
     - Zone3
     - Zone4
     - Zone5
-    rageTarget: 20
+    rageTarget: 200
     availableImps: 10
     patrolling: 0

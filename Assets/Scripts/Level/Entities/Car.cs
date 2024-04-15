@@ -67,7 +67,7 @@ public class Car : MonoBehaviour
         path = null;
         if (destination != null && destination.State == Zone.ZoneState.ActingEvent)
         {
-            destination.OnPoliceArrived();
+            destination.OnPoliceArrived(exorcist);
             fighting = true;
         }
         else

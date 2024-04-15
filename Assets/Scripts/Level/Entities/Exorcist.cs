@@ -7,4 +7,5 @@ public class Exorcist : ScriptableObject
 {
     public string Name;
     public float CarSpeed;
+    public float FightSpeedMult = 1;
 }

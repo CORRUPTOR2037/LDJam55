@@ -35,10 +35,9 @@ public class Player : MonoBehaviour
         }
         foreach (var card in demonCards)
         {
-            var button = card.GetComponent<Button>();
-            button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() => OnDemonClicked(card.CardDemon));
-            button.enabled = false;
+            card.button.onClick.RemoveAllListeners();
+            card.button.onClick.AddListener(() => OnDemonClicked(card.CardDemon));
+            card.button.interactable = false;
             card.SetDeactivated(false);
             card.gameObject.SetActive(false);
         }
@@ -51,10 +50,10 @@ public class Player : MonoBehaviour
         impsCountText.text = currentImps.ToString();
     }
 
-    public void RevokeDemon(Demon demon, int imps)
+    public void RevokeDemon(Demon demon, int imps, float damageToDemon)
     {
         demonsOnDuty.Remove(demon);
-        GetDemonCard(demon).SetTimeout(demon.reloadTime);
+        GetDemonCard(demon).SetTimeout(demon.reloadTime + damageToDemon);
         currentImps += imps;
         impsCountText.text = currentImps.ToString();
     }
@@ -62,7 +61,8 @@ public class Player : MonoBehaviour
     public void LaunchEventSetting(Zone zone)
     {
         foreach (var card in demonCards)
-            card.GetComponent<Button>().enabled = true;
+            if (!card.Deactivated)
+                card.button.interactable = true;
         selectedZone = zone;
         settingEventPanel.availableImps = currentImps;
         settingEventPanel.Show(zone);
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
     public void OnSettingPanelClosed(bool value)
     {
         foreach (var card in demonCards)
-            card.GetComponent<Button>().enabled = false;
+            card.button.interactable = false;
         if (value)
         {
             currentImps -= settingEventPanel.imps;

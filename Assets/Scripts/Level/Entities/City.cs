@@ -98,6 +98,7 @@ public class City : MonoBehaviour
             if (zone.gameObject.activeSelf && zone.State == Zone.ZoneState.Resting)
                 possibleZones.Add(zone);
         
+        if (possibleZones.Count == 0) return;
         var nextZone = possibleZones[Random.Range(0, possibleZones.Count)];
         var nextEvent = events[Random.Range(0, events.Length)];
         nextZone.AssignEvent(nextEvent);

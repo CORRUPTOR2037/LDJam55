@@ -22,18 +22,24 @@ public class Zone : MonoBehaviour
     [DisplayWithoutEdit] public bool Selected = false;
     [DisplayWithoutEdit] public LevelEvent CurrentEvent = null;
     [DisplayWithoutEdit] public Demon AssignedDemon;
+    [DisplayWithoutEdit] public Exorcist AssignedExorcist;
     [DisplayWithoutEdit] public int AssignedImps;
     [DisplayWithoutEdit] public float SuspicionLevel;
     public Action<Zone> onClick;
 
     private bool mouseOn = false;
-    private float rageTimer;
+    private float rageTimer, killImpTimer;
 
     public enum ZoneState
     {
         Resting, OfferingEvent, ActingEvent, Fighting
     }
     [DisplayWithoutEdit] public ZoneState State;
+
+    public int DamagePerSecond => 
+        AssignedDemon.rageMult + 
+        AssignedImps + 
+        (AssignedDemon.specialization == CurrentEvent.EventType ? 1 : 0);
 
     private void Start()
     {
@@ -53,7 +59,6 @@ public class Zone : MonoBehaviour
         fightingTimer.onCompleted = () =>
         {
             CurrentEvent = null;
-            State = ZoneState.Resting;
             RevokeDemon();
             OnStateUpdated();
         };
@@ -73,13 +78,23 @@ public class Zone : MonoBehaviour
 
     private void Update()
     {
-        if (State == ZoneState.ActingEvent)
+        if (State == ZoneState.Fighting && AssignedImps > 0)
+        {
+            killImpTimer -= Time.deltaTime * AssignedExorcist.FightSpeedMult;
+            if (killImpTimer < 0)
+            {
+                AssignedImps--;
+                killImpTimer = balanceSheet.timeForImpFighting;
+                fightingTimer.UpdateImpsCount(AssignedImps);
+            }
+        }
+        if (State == ZoneState.ActingEvent || State == ZoneState.Fighting)
         {
             rageTimer += Time.deltaTime;
             if (rageTimer >= 1)
             {
                 rageTimer -= 1;
-                city.AddRage(1);
+                city.AddRage(DamagePerSecond);
             }
         }
     }
@@ -160,8 +175,9 @@ public class Zone : MonoBehaviour
 
     public void RevokeDemon()
     {
+        float damageToDemon = State == ZoneState.Fighting ? Mathf.Max(0, AssignedDemon.fightTime - fightingTimer.timer * AssignedExorcist.FightSpeedMult) : 0;
         State = ZoneState.Resting;
-        player.RevokeDemon(AssignedDemon, AssignedImps);
+        player.RevokeDemon(AssignedDemon, AssignedImps, damageToDemon);
         OnStateUpdated();
     }
 
@@ -170,20 +186,22 @@ public class Zone : MonoBehaviour
         CurrentEvent = evt;
         State = ZoneState.OfferingEvent;
         OnStateUpdated();
-        offeringTimer.SetupOffer(CurrentEvent, 30);
+        offeringTimer.SetupOffer(CurrentEvent, balanceSheet.timeToTakeEvent);
     }
 
     public void StartAction()
     {
         State = ZoneState.ActingEvent;
-        actingTimer.SetupAct(CurrentEvent, AssignedDemon, AssignedImps);
+        actingTimer.SetupAct(CurrentEvent, AssignedDemon, AssignedImps, DamagePerSecond);
         OnStateUpdated();
     }
 
-    public void OnPoliceArrived()
+    public void OnPoliceArrived(Exorcist exorcist)
     {
         State = ZoneState.Fighting;
-        fightingTimer.SetupFight(AssignedDemon, AssignedDemon.fightTime + AssignedImps * balanceSheet.timeForImpFighting);
+        AssignedExorcist = exorcist;
+        fightingTimer.SetupFight(AssignedDemon, (AssignedDemon.fightTime + AssignedImps * balanceSheet.timeForImpFighting) / exorcist.FightSpeedMult);
+        killImpTimer = balanceSheet.timeForImpFighting;
         OnStateUpdated();
     }
 }

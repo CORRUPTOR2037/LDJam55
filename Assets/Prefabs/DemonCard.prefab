@@ -1484,6 +1484,7 @@ MonoBehaviour:
   impsStat: {fileID: 54279554629865757}
   rageStat: {fileID: 7356416233534912248}
   readySlider: {fileID: 7691704782516471738}
+  button: {fileID: 986793507}
 --- !u!114 &986793507
 MonoBehaviour:
   m_ObjectHideFlags: 0

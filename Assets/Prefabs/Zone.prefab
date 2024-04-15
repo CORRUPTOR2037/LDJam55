@@ -1254,7 +1254,7 @@ MonoBehaviour:
   eventTypeText: {fileID: 3328871922725862952}
   timerText: {fileID: 7598426389982025903}
   ragePerSecond: {fileID: 0}
-  impsCount: {fileID: 0}
+  impsCount: {fileID: 3785446603631728392}
   border: {fileID: 6871453456038983423}
   demonImage: {fileID: 5427393893647885148}
 --- !u!1 &2626891633131353448
