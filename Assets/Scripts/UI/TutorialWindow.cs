@@ -8,7 +8,7 @@ public class TutorialWindow : MonoBehaviour
 {
     public static bool ShowedTutorial = false;
 
-    [SerializeField] private string[] texts;
+    [SerializeField] [TextArea(3, 10)] private string[] texts;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Button left, right;
 
