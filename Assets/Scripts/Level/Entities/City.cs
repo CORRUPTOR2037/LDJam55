@@ -12,7 +12,10 @@ public class City : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dayField, timeField;
     [SerializeField] private Slider dayProgressSlider, globalRageSlider;
     [SerializeField] private BalanceSheet balanceSheet;
-    [SerializeField] private GameObject winPanel, losePanel;
+    [SerializeField] private GameObject winPanel, losePanel, gameCompletedPanel;
+    [SerializeField] private TutorialWindow tutorialWindow;
+    [SerializeField] private Light sun;
+    [SerializeField] private Gradient sunColor;
 
     private int day = 0, hour, minute;
     private float dayProgress = 0, untilNextEvent;
@@ -35,6 +38,10 @@ public class City : MonoBehaviour
         camera = GameInstancesHolder.Get<LevelCamera>();
         policeStation = GameInstancesHolder.Get<PoliceStation>();
         Reset();
+
+
+        if (!TutorialWindow.ShowedTutorial)
+            tutorialWindow.Show();
     }
 
     public void StartNewGame()
@@ -62,6 +69,7 @@ public class City : MonoBehaviour
         player.Reset(daySettings);
         policeStation.Reset(daySettings);
         camera.SetBlockerActive(false);
+        Update();
     }
 
     private void Update()
@@ -82,6 +90,9 @@ public class City : MonoBehaviour
         dayField.text = "Day " + day;
         timeField.text = hour.ToString("00") + ":" + minute.ToString("00");
         dayProgressSlider.value = ratio;
+        sun.color = sunColor.Evaluate(ratio);
+        sun.intensity = sunColor.Evaluate(ratio).a * 1.3f;
+        sun.transform.localEulerAngles = new Vector3(Mathf.Lerp(60, 180, ratio), -200, 0);
 
         untilNextEvent -= Time.deltaTime;
         if (untilNextEvent < 0)
@@ -126,7 +137,9 @@ public class City : MonoBehaviour
         Time.timeScale = 0;
         camera.SetBlockerActive(true);
 
-        if (result)
+        if (result && day >= balanceSheet.totalDays)
+            gameCompletedPanel.SetActive(true);
+        else if (result)
             winPanel.SetActive(true);
         else
             losePanel.SetActive(true);

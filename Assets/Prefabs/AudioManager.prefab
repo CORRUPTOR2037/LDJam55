@@ -49,7 +49,13 @@ MonoBehaviour:
   _music: {fileID: 6659197436518178330}
   _audio: {fileID: 6680430413168670769}
   _clips:
-    _list: []
+    _list:
+    - Key: battle
+      Value: {fileID: 8300000, guid: 7d7c0f58071bf9b46ba888a49c46674a, type: 3}
+    - Key: click
+      Value: {fileID: 8300000, guid: 883931d1ae78a9a469e3172667184c45, type: 3}
+    - Key: game_over
+      Value: {fileID: 8300000, guid: bc27b3950a950104da533980a2cfc43e, type: 3}
 --- !u!82 &6659197436518178330
 AudioSource:
   m_ObjectHideFlags: 0

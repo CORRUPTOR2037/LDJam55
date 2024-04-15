@@ -34,8 +34,6 @@ public class Menu : MonoBehaviour
     public void SetEnabled(bool value)
     {
         container.gameObject.SetActive(value);
-        Cursor.visible = value;
-        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     public void OnLanguageButtonClick(string name)

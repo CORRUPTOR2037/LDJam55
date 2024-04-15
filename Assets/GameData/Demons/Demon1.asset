@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Demon1
   m_EditorClassIdentifier: 
   NameKey: Barbelo
-  Sprite: {fileID: 21300000, guid: 0fbbdbec3ecd5bc40a06ff1b2cd52e3e, type: 3}
+  Sprite: {fileID: 21300000, guid: 294ce2d259d7b104cb95f0b675422857, type: 3}
   reloadTime: 10
   fightTime: 15
   impsCount: 1

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private DemonCard demonCardPrefab;
     [SerializeField] private TextMeshProUGUI impsCountText;
     [SerializeField] private SettingEventPanel settingEventPanel;
+    [SerializeField] private Menu menu;
 
     private List<Demon> demonsOnDuty = new List<Demon>();
     private int currentImps, maxImps;
@@ -104,5 +105,27 @@ public class Player : MonoBehaviour
         foreach (var card in demonCards)
             if (card.CardDemon == demon) return card;
         return null;
+    }
+
+    private float prevTimeScale;
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (!menu.gameObject.activeSelf)
+            {
+                prevTimeScale = Time.timeScale;
+                Time.timeScale = 0;
+                menu.gameObject.SetActive(true);
+                menu.SetEnabled(true);
+            }
+            else
+            {
+                Time.timeScale = prevTimeScale;
+                menu.SetEnabled(false);
+                menu.gameObject.SetActive(false);
+            }
+        }
     }
 }

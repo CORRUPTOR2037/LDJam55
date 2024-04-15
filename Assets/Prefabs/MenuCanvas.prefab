@@ -2736,7 +2736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6696536085903772552, guid: 4b9bd800df7e4a24e8fd47ab96bd1751, type: 3}
       propertyPath: localizationKey
-      value: "\u0412\u044B\u0439\u0442\u0438 \u0432 \u043C\u0435\u043D\u044E"
+      value: RETURN_MENU
       objectReference: {fileID: 0}
     - target: {fileID: 7083442103285991823, guid: 4b9bd800df7e4a24e8fd47ab96bd1751, type: 3}
       propertyPath: m_RootOrder
