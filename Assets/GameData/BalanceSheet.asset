@@ -44,7 +44,7 @@ MonoBehaviour:
     - Shopping
     - South
     - Industrial
-    - Academic town
+    - Academic
     rageTarget: 150
     availableImps: 7
     patrolling: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     - Shopping
     - South
     - Industrial
-    - Academic town
+    - Academic
     rageTarget: 300
     availableImps: 10
     patrolling: 0
@@ -83,8 +83,8 @@ MonoBehaviour:
     - Shopping
     - South
     - Industrial
-    - Academic town
-    - Business center
+    - Academic
+    - Business
     rageTarget: 400
     availableImps: 12
     patrolling: 0

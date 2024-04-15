@@ -13,6 +13,7 @@ public class City : MonoBehaviour
     [SerializeField] private Slider dayProgressSlider, globalRageSlider;
     [SerializeField] private BalanceSheet balanceSheet;
     [SerializeField] private GameObject winPanel, losePanel, gameCompletedPanel;
+    [SerializeField] private TutorialWindow tutorialWindow;
 
     private int day = 0, hour, minute;
     private float dayProgress = 0, untilNextEvent;
@@ -35,6 +36,10 @@ public class City : MonoBehaviour
         camera = GameInstancesHolder.Get<LevelCamera>();
         policeStation = GameInstancesHolder.Get<PoliceStation>();
         Reset();
+
+
+        if (!TutorialWindow.ShowedTutorial)
+            tutorialWindow.Show();
     }
 
     public void StartNewGame()
@@ -62,6 +67,7 @@ public class City : MonoBehaviour
         player.Reset(daySettings);
         policeStation.Reset(daySettings);
         camera.SetBlockerActive(false);
+        Update();
     }
 
     private void Update()

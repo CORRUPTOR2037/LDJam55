@@ -15,12 +15,12 @@ public class LevelCamera : MonoBehaviour
     private void Awake()
     {
         GameInstancesHolder.Register(this);
+        SetBlockerActive(false);
     }
 
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-        SetBlockerActive(false);
     }
 
     void Update()
