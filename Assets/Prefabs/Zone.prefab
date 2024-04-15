@@ -1364,7 +1364,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7118239623096105959}
   - {fileID: 8817286973878249027}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1463,7 +1462,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   selector: {fileID: 3107373607311001472}
-  centerPoint: {fileID: 7118239623096105959}
+  centerPoint: {fileID: 0}
   canvas: {fileID: 6454689586183434966}
   offeringTimer: {fileID: 1121208313610609274}
   actingTimer: {fileID: 5791833351637751847}
@@ -1473,6 +1472,7 @@ MonoBehaviour:
   Selected: 0
   CurrentEvent: {fileID: 0}
   AssignedDemon: {fileID: 0}
+  AssignedExorcist: {fileID: 0}
   AssignedImps: 0
   SuspicionLevel: 0
   State: 0
@@ -1647,37 +1647,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &4208767099090323418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7118239623096105959}
-  m_Layer: 0
-  m_Name: RoadEnd
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7118239623096105959
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208767099090323418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6805919990534140942}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4251354743446066463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2104,7 @@ RectTransform:
   - {fileID: 6059937703194970946}
   - {fileID: 6487706486070082675}
   m_Father: {fileID: 6805919990534140942}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

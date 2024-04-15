@@ -148,14 +148,24 @@ public class RoadSystem : MonoBehaviour
             car.Move();
     }
 
+    private Vector3 up = Vector3.up * 0.1f;
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
+
         foreach (var road in roads)
+        {
+            if (road.points.Length > 0)
+            {
+                Gizmos.DrawIcon(road.points[0].position + up, "sv_icon_dot1_pix16_gizmo");
+                Gizmos.DrawIcon(road.points[road.points.Length - 1].position + up, "sv_icon_dot1_pix16_gizmo");
+            }
             for (int i = 0; i < road.points.Length - 1; i++)
             {
-                Gizmos.DrawLine(road.points[i].position + Vector3.up * 0.1f, road.points[i+1].position + Vector3.up * 0.1f);
+                Gizmos.DrawLine(road.points[i].position + up, road.points[i+1].position + up);
             }
+        }
     }
 
     public void DeactivateAllCars()
