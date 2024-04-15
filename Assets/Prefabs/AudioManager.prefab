@@ -56,6 +56,14 @@ MonoBehaviour:
       Value: {fileID: 8300000, guid: 883931d1ae78a9a469e3172667184c45, type: 3}
     - Key: game_over
       Value: {fileID: 8300000, guid: bc27b3950a950104da533980a2cfc43e, type: 3}
+    - Key: return_demon
+      Value: {fileID: 8300000, guid: 7f59f2f41894f6c4ab92c2c4a4b25164, type: 3}
+    - Key: demon_killed
+      Value: {fileID: 8300000, guid: d10e7821bc1317844a5e00df7707a240, type: 3}
+    - Key: demon_fight
+      Value: {fileID: 8300000, guid: 73c24b173e14e2f43884da14995e329b, type: 3}
+    - Key: demon_sent
+      Value: {fileID: 8300000, guid: bbadd19d9703c554d98411660e07fd58, type: 3}
 --- !u!82 &6659197436518178330
 AudioSource:
   m_ObjectHideFlags: 0

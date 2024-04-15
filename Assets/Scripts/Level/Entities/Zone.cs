@@ -194,11 +194,13 @@ public class Zone : MonoBehaviour
         {
             player.KillDemon(AssignedDemon);
             city.AddRage(-balanceSheet.penaltyForDeath);
+            AudioManager.PlayClip("demon_killed");
         }
         else
         {
             float damageToDemon = State == ZoneState.Fighting ? Mathf.Max(0, AssignedDemon.fightTime - fightingTimer.timer * AssignedExorcist.FightSpeedMult) : 0;
             player.RevokeDemon(AssignedDemon, AssignedImps, damageToDemon);
+            AudioManager.PlayClip("return_demon");
         }
         State = ZoneState.Resting;
         AssignedDemon = null;
@@ -218,6 +220,7 @@ public class Zone : MonoBehaviour
         State = ZoneState.ActingEvent;
         actingTimer.SetupAct(CurrentEvent, AssignedDemon, AssignedImps, DamagePerSecond);
         OnStateUpdated();
+        AudioManager.PlayClip("demon_sent");
     }
 
     public void OnPoliceArrived(Exorcist exorcist)
@@ -228,5 +231,7 @@ public class Zone : MonoBehaviour
         fightingTimer.UpdateImpsCount(AssignedImps);
         killImpTimer = balanceSheet.timeForImpFighting;
         OnStateUpdated();
+        AudioManager.PlayClip("demon_fight");
+        AudioManager.PlayClip("battle");
     }
 }

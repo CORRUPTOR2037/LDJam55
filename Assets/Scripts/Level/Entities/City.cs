@@ -22,6 +22,7 @@ public class City : MonoBehaviour
 
     private int day = 0, hour, minute;
     private float dayProgress = 0, untilNextEvent;
+    private bool dayStarted = false;
     [DisplayWithoutEdit] public float maxRage, currentRage;
 
     private Player player;
@@ -75,11 +76,14 @@ public class City : MonoBehaviour
         player.Reset(daySettings);
         policeStation.Reset(exorcistsSettings);
         camera.SetBlockerActive(false);
+        dayStarted = true;
         Update();
     }
 
     private void Update()
     {
+        if (!dayStarted) return;
+
         dayProgress += Time.deltaTime;
         if (dayProgress > balanceSheet.dayLength)
         {
@@ -148,13 +152,17 @@ public class City : MonoBehaviour
     {
         Time.timeScale = 0;
         camera.SetBlockerActive(true);
+        dayStarted = false;
 
         if (result && day >= balanceSheet.totalDays)
             gameCompletedPanel.SetActive(true);
         else if (result)
             winPanel.SetActive(true);
         else
+        {
+            AudioManager.PlayClip("game_over");
             losePanel.SetActive(true);
+        }
     }
 
     [DisplayWithoutEdit] public float SelectedTimeScale = 1;
