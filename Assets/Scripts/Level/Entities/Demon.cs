@@ -6,6 +6,7 @@ using UnityEngine;
 public class Demon : ScriptableObject
 {
     public string NameKey;
+    public string DescriptionKey;
     public Sprite Sprite;
     public int reloadTime, fightTime, impsCount, rageMult;
     public ZoneEventType specialization;

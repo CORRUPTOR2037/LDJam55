@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SettingEventPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI eventName, eventDescription, eventType, impsCount;
-    [SerializeField] private DemonCard demonCard;
+    [SerializeField] private Image demonCard;
     [SerializeField] private Button plusImp, minusImp;
 
     [DisplayWithoutEdit] public int imps, availableImps;
@@ -55,7 +55,7 @@ public class SettingEventPanel : MonoBehaviour
         imps = 0;
         impsCount.text = "0/" + maxImps;
         demonCard.gameObject.SetActive(true);
-        demonCard.Setup(demon);
+        demonCard.sprite = demon.Sprite;
         minusImp.gameObject.SetActive(false);
         plusImp.gameObject.SetActive(maxImps > 0);
     }

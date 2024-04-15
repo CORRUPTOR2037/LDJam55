@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DemonCard : MonoBehaviour
+public class DemonCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Image background, portrait, deactivatedOverlay;
-    [SerializeField] private TextMeshProUGUI demonName, reloadStat, impsStat, rageStat;
+    [SerializeField] private TextMeshProUGUI demonName, reloadStat, impsStat, tooltipText;
     [SerializeField] private Slider readySlider;
+    [SerializeField] private Image tooltip;
     public Button button;
 
     public Demon CardDemon { get; private set; }
@@ -32,7 +34,7 @@ public class DemonCard : MonoBehaviour
         demonName.text = demon.NameKey;
         reloadStat.text = demon.reloadTime.ToString();
         impsStat.text = demon.impsCount.ToString();
-        rageStat.text = demon.rageMult.ToString();
+        tooltipText.text = demon.DescriptionKey;
         portrait.sprite = demon.Sprite;
         CardDemon = demon;
         readySlider.gameObject.SetActive(false);
@@ -50,5 +52,15 @@ public class DemonCard : MonoBehaviour
         readySlider.maxValue = time;
         timer = time;
         readySlider.gameObject.SetActive(true);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        tooltip.gameObject.SetActive(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        tooltip.gameObject.SetActive(false);
     }
 }
