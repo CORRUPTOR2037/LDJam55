@@ -17,6 +17,7 @@ public class TutorialWindow : MonoBehaviour
 
     private void Start()
     {
+        ShowedTutorial = true;
         left.onClick.AddListener(() => ShowText(selected - 1));
         right.onClick.AddListener(() => ShowText(selected + 1));
     }
@@ -43,7 +44,6 @@ public class TutorialWindow : MonoBehaviour
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
-        ShowedTutorial = true;
         camera.SetBlockerActive(false);
     }
 }
