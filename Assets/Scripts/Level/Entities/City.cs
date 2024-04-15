@@ -126,7 +126,7 @@ public class City : MonoBehaviour
         Time.timeScale = 0;
         camera.SetBlockerActive(true);
 
-        if (result && day < balanceSheet.totalDays)
+        if (result && day >= balanceSheet.totalDays)
             gameCompletedPanel.SetActive(true);
         else if (result)
             winPanel.SetActive(true);
